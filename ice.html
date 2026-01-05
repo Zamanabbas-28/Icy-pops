@@ -39,6 +39,7 @@
             font-size: 28px;
             font-weight: 700;
             color: var(--primary);
+            text-decoration: none;
         }
 
         nav a {
@@ -46,6 +47,11 @@
             text-decoration: none;
             color: var(--dark);
             font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
         }
 
         .hero {
@@ -112,12 +118,13 @@
 <body>
 
 <header>
-    <div class="logo">❄️ Icy Pops</div>
+    <a href="ice.html" class="logo">❄️ Icy Pops</a>
     <nav>
-        <a href="#">Home</a>
-        <a href="#">Flavors</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+        <a href="ice.html">Home</a>
+        <a href="flavours (1).html">Flavors</a>
+        <a href="ABOUT page of website.html">About</a>
+        <a href="contact page of website.html">Contact</a>
+        <a href="sports.html" style="background: linear-gradient(135deg, var(--secondary), var(--primary)); color: white; padding: 8px 20px; border-radius: 20px;">Sports Week</a>
     </nav>
 </header>
 
