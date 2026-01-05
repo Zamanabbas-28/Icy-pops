@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icy Pops | Ice Cream & Popsicles</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #6ecbff;
+            --secondary: #a0e7e5;
+            --dark: #1f2933;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(180deg, #f8fbff, #eef6ff);
+            color: var(--dark);
+        }
+
+        header {
+            background: white;
+            padding: 18px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        nav a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+        }
+
+        .hero {
+            padding: 90px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 10px;
+        }
+
+        .flavors {
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .flavor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .flavor-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .flavor-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .flavor-card img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content h3 {
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">❄️ Icy Pops</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Flavors</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Cool Treats, Pure Happiness</h1>
+    <p>Premium ice creams & icy pops crafted to chill your soul.</p>
+</section>
+
+<section class="flavors">
+    <h2>Signature Flavors</h2>
+
+    <div class="flavor-grid">
+
+        <!-- Vanilla -->
+        <div class="flavor-card">
+            <img src="images/vanila.jpg" alt="Vanilla Ice Cream">
+            <div class="content">
+                <h3>Pure Vanilla Frost</h3>
+                <p>Classic creamy vanilla with a smooth icy texture.</p>
+            </div>
+        </div>
+
+        <!-- Chocolate -->
+        <div class="flavor-card">
+            <img src="images/artic.jpg" alt="Chocolate Ice Cream">
+            <div class="content">
+                <h3>Arctic Chocolate</h3>
+                <p>Rich chocolate ice cream for true cocoa lovers.</p>
+            </div>
+        </div>
+
+        <!-- Strawberry -->
+        <div class="flavor-card">
+            <img src="images/berry.jpg" alt="Strawberry Popsicle">
+            <div class="content">
+                <h3>Berry Ice Pop</h3>
+                <p>Fresh strawberry pops frozen to perfection.</p>
+            </div>
+        </div>
+
+        <!-- Mint -->
+        <div class="flavor-card">
+            <img src="images/mint.jpg" alt="Mint Ice Cream">
+            <div class="content">
+                <h3>Mint Glacier Chip</h3>
+                <p>Cool mint blended with crunchy chocolate chips.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>📍 134 Commercial Avenue, Islamabad</p>
+    <p>📞 +92 333 3333333</p>
+    <p>&copy; 2025 Icy Pops. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
