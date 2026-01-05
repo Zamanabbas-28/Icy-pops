@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icy Pops - Login</title>
+    <style>
+        /* CSS STYLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            /* A refreshing summer gradient */
+            background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 50%, #ffd3b6 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Floating background decoration */
+        body::before {
+            content: "🍦";
+            position: absolute;
+            font-size: 10rem;
+            opacity: 0.1;
+            top: 10%;
+            left: 10%;
+            transform: rotate(-20deg);
+        }
+
+        .login-container {
+            position: relative;
+            z-index: 1;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .login-box {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            text-align: center;
+            border: 4px solid #ffffff;
+        }
+
+        .logo h1 {
+            color: #ff8b94;
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            letter-spacing: -1px;
+        }
+
+        .logo p {
+            color: #88bdbc;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .input-group {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+            font-size: 0.9rem;
+            padding-left: 5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #f0f0f0;
+            border-radius: 15px;
+            outline: none;
+            background: #fdfdfd;
+            transition: all 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: #ff8b94;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(255, 139, 148, 0.2);
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #ff8b94;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 139, 148, 0.3);
+            margin-top: 10px;
+        }
+
+        .login-btn:hover {
+            background-color: #ff7480;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 139, 148, 0.4);
+        }
+
+        .login-btn:active {
+            transform: translateY(0);
+        }
+
+        .footer-links {
+            margin-top: 25px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        .footer-links a {
+            color: #ff8b94;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .divider {
+            margin: 15px 0;
+            display: block;
+            height: 1px;
+            background: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">
+                <h1>Icy Pops</h1>
+                <p>The coolest treats in town</p>
+            </div>
+            
+            <form action="#">
+                <div class="input-group">
+                    <label for="username">Username or Email</label>
+                    <input type="text" id="username" placeholder="Scoop up your email..." required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Your secret flavor..." required>
+                </div>
+                
+                <button type="submit" class="login-btn">Log In</button>
+                
+                <div class="footer-links">
+                    <a href="#">Forgot Password?</a>
+                    <div class="divider"></div>
+                    <p>Don't have an account? <a href="#">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
