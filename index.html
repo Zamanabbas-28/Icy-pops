@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Icy Pops | Ice Cream & Popsicles</title>
-
+    <title>Icy Pops - Login</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
     <style>
         :root {
             --primary: #6ecbff;
@@ -18,171 +16,193 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
             background: linear-gradient(180deg, #f8fbff, #eef6ff);
-            color: var(--dark);
-        }
-
-        header {
-            background: white;
-            padding: 18px 50px;
+            height: 100vh;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+            overflow: hidden;
         }
 
-        .logo {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
+        /* Floating background decoration */
+        body::before {
+            content: "🍦";
+            position: absolute;
+            font-size: 10rem;
+            opacity: 0.1;
+            top: 10%;
+            left: 10%;
+            transform: rotate(-20deg);
         }
 
-        nav a {
-            margin-left: 25px;
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            transition: color 0.3s;
+        .login-container {
+            position: relative;
+            z-index: 1;
+            width: 90%;
+            max-width: 400px;
         }
 
-        nav a:hover {
-            color: var(--primary);
-        }
-
-        .hero {
-            padding: 90px 20px;
+        .login-box {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
             text-align: center;
+            border: 4px solid white;
+        }
+
+        .logo h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            letter-spacing: -1px;
+        }
+
+        .logo p {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .input-group {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 0.9rem;
+            padding-left: 5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            outline: none;
+            background: #fdfdfd;
+            transition: all 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: var(--primary);
+            background: #fff;
+            box-shadow: 0 0 10px rgba(110, 203, 255, 0.2);
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 14px;
             background: linear-gradient(135deg, var(--secondary), var(--primary));
             color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(110, 203, 255, 0.3);
+            margin-top: 10px;
         }
 
-        .hero h1 {
-            font-size: 52px;
-            margin-bottom: 10px;
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(110, 203, 255, 0.4);
         }
 
-        .flavors {
-            padding: 70px 20px;
-            text-align: center;
+        .login-btn:active {
+            transform: translateY(0);
         }
 
-        .flavor-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        .flavor-card {
-            background: white;
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
-        }
-
-        .flavor-card:hover {
-            transform: translateY(-6px);
-        }
-
-        .flavor-card img {
+        .skip-btn {
             width: 100%;
-            height: 230px;
-            object-fit: cover;
-        }
-
-        .content {
-            padding: 20px;
-        }
-
-        .content h3 {
+            padding: 12px;
+            background: transparent;
             color: var(--primary);
-            margin-bottom: 6px;
+            border: 2px solid var(--primary);
+            border-radius: 15px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 15px;
+            text-decoration: none;
+            display: inline-block;
         }
 
-        footer {
-            background: var(--dark);
+        .skip-btn:hover {
+            background: var(--primary);
             color: white;
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 60px;
+            transform: translateY(-2px);
+        }
+
+        .footer-links {
+            margin-top: 25px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        .footer-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .divider {
+            margin: 15px 0;
+            display: block;
+            height: 1px;
+            background: #eee;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <a href="index.html" class="logo">❄️ Icy Pops</a>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="flavours (1).html">Flavors</a>
-        <a href="ABOUT page of website.html">About</a>
-        <a href="contact page of website.html">Contact</a>
-        <a href="sports.html" style="background: linear-gradient(135deg, var(--secondary), var(--primary)); color: white; padding: 8px 20px; border-radius: 20px;">Sports Week</a>
-    </nav>
-</header>
-
-<section class="hero">
-    <h1>Cool Treats, Pure Happiness</h1>
-    <p>Premium ice creams & icy pops crafted to chill your soul.</p>
-</section>
-
-<section class="flavors">
-    <h2>Signature Flavors</h2>
-
-    <div class="flavor-grid">
-
-        <!-- Vanilla -->
-        <div class="flavor-card">
-            <img src="images/vanila.jpg" alt="Vanilla Ice Cream">
-            <div class="content">
-                <h3>Pure Vanilla Frost</h3>
-                <p>Classic creamy vanilla with a smooth icy texture.</p>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">
+                <h1>Icy Pops</h1>
+                <p>The coolest treats in town</p>
             </div>
+            
+            <form action="ice.html" method="get">
+                <div class="input-group">
+                    <label for="username">Username or Email</label>
+                    <input type="text" id="username" placeholder="Scoop up your email...">
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Your secret flavor...">
+                </div>
+                
+                <button type="submit" class="login-btn">Log In</button>
+                
+                <a href="ice.html" class="skip-btn">Skip Login</a>
+                
+                <div class="footer-links">
+                    <a href="#">Forgot Password?</a>
+                    <div class="divider"></div>
+                    <p>Don't have an account? <a href="#">Sign Up</a></p>
+                </div>
+            </form>
         </div>
-
-        <!-- Chocolate -->
-        <div class="flavor-card">
-            <img src="images/artic.jpg" alt="Chocolate Ice Cream">
-            <div class="content">
-                <h3>Arctic Chocolate</h3>
-                <p>Rich chocolate ice cream for true cocoa lovers.</p>
-            </div>
-        </div>
-
-        <!-- Strawberry -->
-        <div class="flavor-card">
-            <img src="images/berry.jpg" alt="Strawberry Popsicle">
-            <div class="content">
-                <h3>Berry Ice Pop</h3>
-                <p>Fresh strawberry pops frozen to perfection.</p>
-            </div>
-        </div>
-
-        <!-- Mint -->
-        <div class="flavor-card">
-            <img src="images/mint.jpg" alt="Mint Ice Cream">
-            <div class="content">
-                <h3>Mint Glacier Chip</h3>
-                <p>Cool mint blended with crunchy chocolate chips.</p>
-            </div>
-        </div>
-
     </div>
-</section>
-
-<footer>
-    <p>📍 134 Commercial Avenue, Islamabad</p>
-    <p>📞 +92 333 3333333</p>
-    <p>&copy; 2025 Icy Pops. All rights reserved.</p>
-</footer>
 
 </body>
 </html>
-
