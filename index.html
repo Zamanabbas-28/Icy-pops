@@ -170,6 +170,12 @@
             background: #eee;
         }
     </style>
+    <script>
+        function showWelcome() {
+            alert("Welcome to Icy Pops!");
+            window.location.href = "ice.html";
+        }
+    </script>
 </head>
 <body>
 
@@ -193,7 +199,7 @@
                 
                 <button type="submit" class="login-btn">Log In</button>
                 
-                <a href="ice.html" class="skip-btn">Skip Login</a>
+                <a href="ice.html" class="skip-btn" onclick="showWelcome(); return false;">Skip Login</a>
                 
                 <div class="footer-links">
                     <a href="#">Forgot Password?</a>
